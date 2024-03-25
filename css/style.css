@@ -1,0 +1,424 @@
+/****** BODY ******/
+/* SMALL SCREEN */
+@media screen and (min-width: 40em){ 
+    body {
+        margin:0;
+        min-height: 100vh;
+        font-family: 'Bebas Neue', cursive;
+        display: flex;
+        flex-direction: column;
+    }
+    #page {
+        background-color: white;
+        overflow: hidden;
+        height: 100vh;
+    }
+}
+/* LARGE SCEEEN */
+@media screen and (min-width: 64em){
+    body {
+        background-color: #FFDEC5;
+        margin:0;
+        min-height: 100vh;
+        
+        font-family: 'Bebas Neue', cursive;
+        display: flex;
+        flex-direction: column;
+    }
+    #page {
+        background-color: white;
+        overflow: hidden;
+        height: 100vh;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+/******* NAVBAR *******/
+#current-page {
+    box-shadow: 0.1rem 0.1rem 0.1rem 0.1rem black;
+}
+nav {
+    background-color:#9E4500;
+    color: black;
+    
+    top:0;
+    width:100%;
+}
+#navbar {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+}
+#navbar li{
+	list-style-type:none;
+	padding: 0.05rem;
+}
+#navbar li a {
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    font:bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+#navbar li a:hover{
+    color:#fdcfac;
+    transition:0.5s;
+}
+#navbar li button {
+    background-color:#9E4500;
+    border:none;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+#navbar li button:hover {
+    color: #fdcfac;
+    transition:0.5s;
+}
+
+.nav-search-button {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 16px;
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+    padding: 0px 16px;
+    text-align: center;
+    cursor: pointer;
+}
+.nav-search-button:hover{
+    background-color: #fdcfac;
+    transition: 0.5s;
+}
+.dropdown {
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+    color:white;
+    
+}
+.dropdown:hover {
+    color: #fdcfac;
+    transition:0.5s;
+}
+.dropdown-content {
+    top: auto;
+    background-color:#9E4500;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+}
+.dropdown-content a {
+    border: 0.01rem solid;
+    border-color: #8d3e02;
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/****** INDEX PAGE ******/
+.events-ad {
+    display:flex;
+    justify-content: center;
+}
+.events-ad img {
+    width:50rem;
+    height:auto;
+    box-shadow: 3px 3px 3px 3px grey;
+}
+.events-ad img:hover { 
+    cursor:pointer;
+    opacity: 85%;
+}
+.events-ad-text {
+    color:black;
+    background-color: rgba(256, 256, 256, 1);
+    font-weight: bold;
+    text-align: center;
+    width: 48.85rem;
+    padding: 0.5rem;
+    position:absolute;
+    box-shadow: 3px 3px 3px 3px grey;
+    top:30%;
+    left:50%;
+    transform:translate(-50%, -50%);
+}
+.category-links {
+    display: flex;
+    justify-content: center;
+}
+.category-links ul{
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.25rem;
+}
+.category-links ul li{
+    display: flex;
+    justify-content: space-between;
+    max-width: 20rem;
+    max-height: 20rem;
+    object-fit:contain;
+    overflow: hidden;
+    margin: 0.5rem;
+}
+.category-links ul li:hover{
+    cursor: pointer;
+    box-shadow: 3px 3px 3px 3px grey;
+    transition: 0.2s;
+}
+.category-images-text{ 
+    text-align: center;
+    font-size: 32px;
+    text-decoration: none;
+    background-color: rgba(256, 256, 256, 0.8);
+    color: black;
+    transform:translate(0rem, -12.5rem);
+    padding: 0.5rem;
+}
+.category-images {
+    max-width: 20rem;
+    max-height: 20rem;
+    transform: scale(1.7);
+    opacity: 80%;
+}
+/****** CATEGORIES PAGE ******/
+.categoryBanner {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 30%;
+    top: 0px;
+    text-align: center;
+    color: white;
+}
+.categoryBanner img {
+    width:auto;
+    height: auto;
+    top: 0px;
+}
+.categoryBanner h2 {
+    position: absolute;
+    color: rgba(240, 240, 250, 0.8);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 48px;
+    text-align: center;
+    font:italic;
+    transform: translate(0rem, 15rem);
+    overflow: hidden;
+}
+.productContainer {
+    display:flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.25rem;
+}
+.productItem {
+    border: 2px solid;
+    border-color: black;
+
+    display: flex;
+    width: 15rem;
+    height: 25rem;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0.25rem;
+}
+.productItem:hover {
+    cursor: pointer;
+    box-shadow: 3px 3px 3px 3px black;
+    transition: 0.2s;
+}
+.productPrice {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.productImage {
+    max-width: 12rem;
+    max-height: 12rem;
+}
+.productImage img {
+    max-width: 12rem;
+    max-height: 12rem;
+}
+.productDetails {
+    overflow:auto;
+    max-width: 13rem;
+    list-style-type: none;
+}
+
+/****** SEARCH PAGE ******/
+.searchResults {
+    display: flex;
+    justify-content: center;
+}
+/****** PRODUCT PAGE ******/
+/*** DID NOT FINISH IN TIME ***/
+
+/****** MEMBERSHIP PAGE ******/
+.membership-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.membership-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.membership-item {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+    border: 1px solid;
+    border-color: black;
+}
+.membership-item input[type="button"]{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    background-color: grey;
+    border: 1px solid black;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+}
+.membership-item input[type="button"]:hover{
+    background-color: black;
+    cursor: pointer;
+}
+/****** ROOMBOOKING PAGE ******/
+.room-booking-container {
+    display: flex;
+    justify-content: center space-between;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    margin: 2rem;
+}
+.room-booking-table {
+    border-collapse: collapse;
+    border: 2px solid;
+    border-color: black;
+    font-size: 20px;
+    text-align: center;
+}
+th, td {
+    padding: 10px;
+}
+.room-booking-table thead {
+    color: white;
+    background-color: rgb(22, 22, 22);
+    padding: 0.1rem;
+}
+.room-booking-table tbody tr:nth-child(even){
+    background-color: rgb(192, 192, 192);
+}
+.room-booking-table tbody tr:nth-child(odd){
+    background-color: white;
+}
+.room-booking-form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.room-booking-form fieldset {
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+}
+.room-booking-form fieldset input[type="button"]{
+    font-family: 'Bebas Neue', cursive;
+    font-size: 20px;
+    background-color: grey;
+    border: 1px solid black;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+}
+.room-booking-form fieldset input[type="button"]:hover{
+    background-color: black;
+    cursor: pointer;
+}
+/****** EVENTS PAGE ******/
+.events-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.events-container img {
+    width: 100%;
+    padding: 0px;
+}
+.events-container h1 {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: 48px;
+    padding: 0px;
+    transform: translate(0%, -100%);
+}
+.event-list {
+    width: 40rem;
+    padding: 0px;
+}
+.event-list ul {
+    border: 1px solid black;
+    box-shadow: 1px 1px 1px 1px black;
+    text-align: center;
+    font-size: 24px;
+    list-style: none;
+}
+/****** CONTACT PAGE ******/
+.contact-container {
+    display: flex;
+    padding: 10rem;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 24px;
+}
+/****** FOOTER ******/
+footer {
+    width:100%;
+    
+    bottom: 0px;
+    left:0rem;
+    background-color: #9E4500;
+    color: white;
+    min-height: 2rem;
+
+    display:flex;
+    align-content: center;
+    justify-content: space-between;
+}
+footer div {
+    padding: 1rem;
+}
+.contact-link{
+    color:white;
+    text-decoration: none;
+}
+.contact-link:hover {
+    color: #fdcfac;
+    transition:0.5s;
+}
+
